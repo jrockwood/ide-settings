@@ -20,7 +20,7 @@ insert_final_newline                                                       = tru
 # Organize usings
 dotnet_separate_import_directive_groups                                    = false
 dotnet_sort_system_directives_first                                        = true
-file_header_template                                                       = // ---------------------------------------------------------------------------------------------------------------------\n// <copyright file="{filename}" company="Justin Rockwood">\n//   Copyright (c) Justin Rockwood. All Rights Reserved. Licensed under the Apache License, Version 2.0. See\n//   LICENSE.txt in the project root for license information.\n// </copyright>\n// ---------------------------------------------------------------------------------------------------------------------\n
+file_header_template                                                       = // ---------------------------------------------------------------------------------------------------------------------\n// <copyright file="{filename}" company="Justin Rockwood">\n//   Copyright (c) Justin Rockwood. All Rights Reserved. See LICENSE.txt in the project root for license information.\n// </copyright>\n// ---------------------------------------------------------------------------------------------------------------------\n
 
 # this. and Me. preferences
 dotnet_style_qualification_for_event                                       = false : error
