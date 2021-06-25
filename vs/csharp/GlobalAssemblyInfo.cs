@@ -1,7 +1,6 @@
 ﻿// ---------------------------------------------------------------------------------------------------------------------
 // <copyright file="GlobalAssemblyInfo.cs" company="Justin Rockwood">
-//   Copyright (c) Justin Rockwood. All Rights Reserved. Licensed under the MIT License. See LICENSE.txt in the project
-//   root for license information.
+//   Copyright (c) Justin Rockwood. All Rights Reserved. See LICENSE.txt in the project root for license information.
 // </copyright>
 // ---------------------------------------------------------------------------------------------------------------------
 
