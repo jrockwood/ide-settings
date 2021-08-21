@@ -1,7 +1,10 @@
+.eslintignore
+.eslintrc
 .gitattributes
 .gitlab-ci.yml
 .markdownlint.json
 .npmignore
+.prettierignore
 .prettierrc
 .vscode/
 build/
@@ -16,6 +19,7 @@ src/*
 test/
 tmp/
 dependencies.lock
+jasmine.json
 package.config.js
 tsconfig.json
 tslint.json
