@@ -6,5 +6,10 @@ describe('Example', () => {
       const example = new Example();
       expect(example.toString()).toBe('Example!');
     });
+
+    it('should use a custom Jasmine matcher from jasmine-expect', () => {
+      const example = new Example();
+      expect(example.toString()).toStartWith('Ex');
+    });
   });
 });
