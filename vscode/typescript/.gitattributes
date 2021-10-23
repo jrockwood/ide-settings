@@ -3,7 +3,7 @@
 # Common settings that generally should always be used with your language specific settings
 
 # Auto detect text files and perform LF normalization
-*          text=auto
+*          text eol=lf
 
 #
 # The above will handle all files NOT found below
@@ -195,7 +195,7 @@ package.json      text eol=lf
 package-lock.json text -diff
 pnpm-lock.yaml    text eol=lf -diff
 .prettierrc       text
-yarn.lock         text -diff
+yarn.lock         text eol=auto -diff
 *.toml            text
 *.yaml            text
 *.yml             text
