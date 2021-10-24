@@ -5,7 +5,6 @@
     "node": true
   },
   "extends": ["standard", "plugin:@typescript-eslint/recommended", "prettier/prettier", "plugin:prettier/recommended"],
-  "ignorePatterns": "./package.json",
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 2021,
@@ -13,6 +12,8 @@
   },
   "plugins": ["@typescript-eslint"],
   "rules": {
-    "@typescript-eslint/no-unused-vars": [ "error", { "argsIgnorePattern": "^_"} ]
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error", { "functions": false }],
+    "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }]
   }
 }
