@@ -1,3 +1,7 @@
 /lib
 /node_modules
+
+LICENSE
 package.json
+README.md
+yarn.lock

@@ -9,10 +9,12 @@
   "main": "lib/src/index.js",
   "bin": "lib/src/index.js",
   "scripts": {
-    "build": "yarn install && yarn run clean && yarn run compile && yarn run test",
+    "build": "yarn install && yarn run clean && yarn run compile && yarn run lint && yarn run test",
     "clean": "rimraf lib",
     "compile": "tsc --project .",
     "compile-watch": "tsc --project . --watch",
+    "lint": "npx eslint **",
+    "lint:fix": "npx eslint ** --fix",
     "test": "jasmine --config=jasmine.json",
     "test-watch": "nodemon --ext js --exec \"jasmine --config=jasmine.json\""
   },
@@ -25,7 +27,6 @@
     "@typescript-eslint/parser": "5.1.0",
     "eslint": "8.1.0",
     "eslint-config-prettier": "8.3.0",
-    "eslint-config-standard": "16.0.3",
     "eslint-import-resolver-typescript": "2.5.0",
     "eslint-plugin-import": "2.25.2",
     "eslint-plugin-node": "11.1.0",
