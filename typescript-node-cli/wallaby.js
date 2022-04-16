@@ -2,6 +2,11 @@ module.exports = () => {
   return {
     files: [
       { pattern: 'node_modules/jasmine-expect/dist/jasmine-matchers.js', instrument: false, load: true },
+      {
+        pattern: 'node_modules/@jrockwood/injected-console-matchers/lib/src/JasmineMatchers.js',
+        instrument: false,
+        load: true,
+      },
       'src/**/*.ts',
     ],
     tests: ['test/**/*.test.ts'],
@@ -23,12 +28,15 @@ module.exports = () => {
       const cacheKeys = Object.keys(require.cache);
 
       // remove all of the cache entries for jasmine-expect and reload them every instance of a test
-      const allJasmineMatchers = cacheKeys.filter((key) => key.includes('jasmine-expect'));
+      const allJasmineMatchers = cacheKeys.filter(
+        (key) => key.includes('jasmine-expect') || key.includes('injected-console-matchers'),
+      );
       if (allJasmineMatchers.length > 0) {
         allJasmineMatchers.forEach((key) => delete require.cache[key]);
       }
 
       require('jasmine-expect');
+      require('@jrockwood/injected-console-matchers');
     },
 
     workers: {

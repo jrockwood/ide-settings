@@ -1,5 +1,8 @@
 {
-  "helpers": ["../node_modules/jasmine-expect/index.js"],
+  "helpers": [
+    "../node_modules/jasmine-expect/index.js",
+    "../node_modules/@jrockwood/injected-console-matchers/lib/src/JasmineMatchers.js"
+  ],
   "spec_dir": "lib",
   "spec_files": ["**/*.test.js"]
 }
