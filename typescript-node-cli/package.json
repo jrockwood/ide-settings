@@ -9,14 +9,14 @@
   "main": "lib/src/index.js",
   "bin": "lib/src/index.js",
   "scripts": {
-    "build": "yarn install && yarn run clean && yarn run compile && yarn run lint && yarn run test",
+    "build": "npm install && npm run clean && npm run compile && npm run lint && npm run test",
     "clean": "rimraf lib",
     "compile": "tsc --project .",
-    "compile-watch": "tsc --project . --watch",
-    "lint": "npx eslint **",
-    "lint:fix": "npx eslint ** --fix",
-    "test": "jasmine --config=jasmine.json",
-    "test-watch": "nodemon --ext js --exec \"jasmine --config=jasmine.json\""
+    "compile:watch": "tsc --project . --watch",
+    "lint": "npx eslint src/** test/**",
+    "lint:fix": "npx eslint src/** test/** --fix",
+    "test": "npx cross-env NODE_ENV=test npx jasmine --config=jasmine.json",
+    "test:watch": "npx cross-env NODE_ENV=test npx nodemon --ext js --watch lib --exec \"npx jasmine --config=jasmine.json\""
   },
   "devDependencies": {
     "@jrockwood/injected-console-matchers": "2.0.1",
