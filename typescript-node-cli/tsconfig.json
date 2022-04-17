@@ -9,7 +9,7 @@
     "sourceMap": true,
     "strict": true,
     "target": "es2021",
-    "types": ["node", "jasmine", "jasmine-expect"]
+    "types": ["node", "jasmine", "jasmine-expect", "@jrockwood/injected-console-matchers"]
   },
   "include": ["src", "test"]
 }
